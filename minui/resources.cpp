@@ -274,7 +274,7 @@ int res_create_multi_display_surface(const char* name, int* frames, int* fps,
         goto exit;
     }
 
-    if (height % *frames != 0) {
+    if ((height % *frames) != 0) {
         printf("bad height (%d) for frame count (%d)\n", height, *frames);
         result = -9;
         goto exit;
